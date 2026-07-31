@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty | IEEE PCE</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../static/ieeee.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  
+  <link rel="stylesheet" href="../home/styles.css" />   <link rel="stylesheet" href="../faculty/faculty.css" /> </head>
+<body>
+
+  <header class="navbar">
+    <a href="../home/index.html" class="logo-link">
+      <img src="../static/ieeee.png" alt="IEEE PCE Logo" class="logo" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../home/index.html" >Home</a></li>
+      <li><a href="../events/events.html">Events</a></li>
+      <li><a href="../faculty/faculty.html" style="color: var(--accent-primary);">Faculty</a></li>
+      <li><a href="../council/council.html">Council</a></li>
+      <li><a href="Final Mag.pdf">Magazine</a></li>
+      <li><a href="../contact/contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-controls">
+      <i class="fa-solid fa-bars open-menu" id="open-menu"></i>
+    </div>
+  </header>
+
+  <main class="faculty-page-wrapper">
+    
+    <section class="faculty-section section-padding">
+      <div class="section-header center-header hidden">
+        <p class="tech-subheading">// SYSTEM: DATABASE_ACCESS_GRANTED</p>
+        <h2 class="space-title">Department Leadership</h2>
+        <div class="line mx-auto"></div>
+      </div>
+
+      <div class="personnel-grid">
+        
+        <div class="personnel-card hidden" data-tilt>
+          <div class="card-inner">
+            <div class="card-corners"></div>
+            <div class="personnel-image-wrapper">
+              <img src="../static/faculty/hod.png" alt="Dr. Monika Bhagwat">
+            </div>
+            <div class="personnel-info">
+              <!-- <span class="auth-level">AUTH_LEVEL: OMEGA</span> -->
+              <h3>Dr. Monika Bhagwat</h3>
+              <p class="role-text">&gt; HOD ECS</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="personnel-card hidden" data-tilt>
+          <div class="card-inner">
+            <div class="card-corners"></div>
+            <div class="personnel-image-wrapper">
+              <img src="../static/faculty/faculty2.png" alt="Dr. Karpagavalli S.">
+            </div>
+            <div class="personnel-info">
+              <!-- <span class="auth-level">AUTH_LEVEL: ALPHA</span> -->
+              <h3>Dr. Karpagavalli S.</h3>
+              <p class="role-text">&gt; FACULTY COORDINATOR</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" style="margin-top: auto;">
+    <div class="footer-bottom">
+      <img src="../static/PCElogo.png" style="height: 40px; width: 40px; margin-bottom: 10px;" alt="PCE Logo" />
+      <p>© 2026 IEEE PCE Student Branch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script> <script src="faculty.js"></script>   </body>
+</html>

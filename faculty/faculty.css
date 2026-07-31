@@ -1,0 +1,182 @@
+/* Ensure the page clears the fixed navbar */
+.faculty-page-wrapper {
+  margin-top: 100px; 
+  min-height: 80vh;
+}
+
+.center-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.space-title {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-main, #f8fafc);
+  letter-spacing: -1px;
+}
+
+.tech-subheading {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  color: var(--accent-primary, #3b82f6);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- The Personnel Grid --- */
+.personnel-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- 3D Holographic Card Styles --- */
+.personnel-card {
+  width: 450px;
+  perspective: 1000px; /* Required for the 3D tilt effect */
+}
+
+.card-inner {
+  position: relative;
+  background: var(--bg-card, #111c33);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  transform-style: preserve-3d; /* Allows inner elements to pop out */
+}
+
+.personnel-card:hover .card-inner {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--accent-primary, #3b82f6);
+}
+
+/* The Cyberpunk Viewfinder Corners */
+.card-corners::before,
+.card-corners::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.card-corners::before {
+  border-top: 2px solid var(--accent-primary, #3b82f6);
+  border-left: 2px solid var(--accent-primary, #3b82f6);
+  clip-path: polygon(0 0, 30px 0, 30px 2px, 2px 2px, 2px 30px, 0 30px);
+}
+
+.card-corners::after {
+  border-bottom: 2px solid var(--accent-primary, #3b82f6);
+  border-right: 2px solid var(--accent-primary, #3b82f6);
+  clip-path: polygon(100% 100%, calc(100% - 30px) 100%, calc(100% - 30px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 30px), 100% calc(100% - 30px));
+}
+
+/* Image Styling */
+.personnel-image-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 4px solid rgba(59, 130, 246, 0.2);
+  background: var(--bg-deep, #050b14);
+  /* This pushes the image OUT towards the user in 3D space during the tilt */
+  transform: translateZ(40px); 
+}
+
+.personnel-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: grayscale(20%) contrast(110%); */
+  transition: filter 0.3s ease;
+}
+
+.personnel-card:hover .personnel-image-wrapper img {
+  /* filter: grayscale(0%) contrast(100%); */
+  transform: scale(1.05);
+}
+
+/* Active Scanning Line Effect over the photo */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 10px var(--accent-primary, #3b82f6);
+  animation: scan-face 4s infinite linear;
+  opacity: 0.5;
+}
+
+@keyframes scan-face {
+  0% { top: -10%; opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { top: 110%; opacity: 0; }
+}
+
+/* Text Info */
+.personnel-info {
+  text-align: center;
+  transform: translateZ(20px); /* Slightly popped out */
+  width: 100%;
+}
+
+.auth-level {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  color: var(--text-muted, #94a3b8);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.personnel-info h3 {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.8rem;
+  color: var(--text-main, #fff);
+  margin-bottom: 8px;
+}
+
+.role-text {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.9rem;
+  color: var(--accent-primary, #3b82f6);
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .personnel-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}

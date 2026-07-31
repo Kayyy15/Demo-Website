@@ -1,0 +1,304 @@
+/* --- Global Clears --- */
+.contact-page-wrapper {
+  margin-top: 100px;
+  min-height: 80vh;
+  padding-bottom: 60px;
+}
+
+.center-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.space-title {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-main, #fff);
+  letter-spacing: -1px;
+}
+
+.tech-subheading {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  color: var(--accent-primary, #3b82f6);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Terminal Grid Layout --- */
+.contact-terminal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Panels */
+.terminal-panel {
+  background: var(--bg-card, #111c33);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.9rem;
+  color: var(--text-muted, #94a3b8);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-header i {
+  color: var(--accent-primary, #3b82f6);
+}
+
+/* --- Left Side: Cyber Form --- */
+.cyber-form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+/* Inputs & Textareas */
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 15px 15px 10px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: var(--text-main, #fff);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  appearance: none;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.input-group select {
+  color: var(--text-muted, #94a3b8);
+  cursor: pointer;
+}
+.input-group select option {
+  background: var(--bg-card, #111c33);
+  color: #fff;
+}
+
+/* The Glowing Bottom Border */
+.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent-primary, #3b82f6);
+  transition: 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.input-group input:focus ~ .focus-border,
+.input-group textarea:focus ~ .focus-border,
+.input-group select:focus ~ .focus-border {
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(59, 130, 246, 0.5);
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Floating Labels Magic */
+.input-group label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: var(--text-muted, #94a3b8);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+/* When input is focused, OR has text (because of the placeholder=" " trick) */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.8rem;
+  background: var(--bg-card, #111c33);
+  padding: 0 5px;
+  color: var(--accent-primary, #3b82f6);
+}
+
+/* Submit Button */
+.cyber-btn {
+  background: transparent;
+  color: var(--accent-primary, #3b82f6);
+  border: 1px solid var(--accent-primary, #3b82f6);
+  padding: 16px 20px;
+  border-radius: 6px;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.cyber-btn:hover {
+  background: var(--accent-primary, #3b82f6);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* --- Right Side: Radar & Info --- */
+.info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-radar {
+  padding: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.radar-title {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  color: var(--text-muted, #94a3b8);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.social-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.social-box {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-main, #fff);
+  text-decoration: none;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-box i {
+  font-size: 1.5rem;
+  color: var(--text-muted, #94a3b8);
+  transition: color 0.3s ease;
+}
+
+.social-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-box.linkedin:hover {
+  box-shadow: 0 10px 20px rgba(10, 102, 194, 0.2);
+}
+.social-box.linkedin:hover i { color: #0a66c2; }
+
+.social-box.instagram:hover {
+  box-shadow: 0 10px 20px rgba(225, 48, 108, 0.2);
+}
+.social-box.instagram:hover i { color: #e1306c; }
+
+
+/* Dark Mode Map Integration */
+.map-container {
+  flex-grow: 1;
+  position: relative;
+  min-height: 250px;
+  background: var(--bg-deep, #050b14);
+}
+
+.map-container iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(85%) opacity(80%);
+  transition: filter 0.4s ease;
+}
+
+.map-container:hover iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(100%) opacity(100%);
+}
+
+.map-overlay-scan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-terminal {
+    grid-template-columns: 1fr;
+  }
+  .input-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .map-container {
+    min-height: 350px;
+  }
+}

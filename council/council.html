@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Council | IEEE PCE</title>
+    <link rel="shortcut icon" href="../static/ieeee.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="../home/styles.css" />
+    <link rel="stylesheet" href="../council/council.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../home/index.html" class="logo-link">
+            <img src="../static/ieeee.png" alt="IEEE PCE Logo" class="logo" />
+        </a>
+        <ul class="nav-links" id="nav-links">
+      <li><a href="../home/index.html">Home</a></li>
+      <li><a href="../events/events.html">Events</a></li>
+      <li><a href="../faculty/faculty.html">Faculty</a></li>
+      <li><a href="../council/council.html" style="color: var(--accent-primary);">Council</a></li>
+      <li><a href="Final Mag.pdf">Magazine</a></li>
+      <li><a href="../contact/contact.html">Contact Us</a></li>
+    </ul>
+        <div class="nav-controls">
+            <i class="fa-solid fa-bars open-menu" id="open-menu"></i>
+        </div>
+    </header>
+
+    <main class="team-page-wrapper">
+        
+        <section class="section-padding center-header">
+            <p class="tech-subheading">// SYSTEM: PERSONNEL_DATABASE_ONLINE</p>
+            <h2 class="space-title">Executive Council</h2>
+            <div class="line mx-auto"></div>
+        </section>
+
+        <div class="jumbotron-container">
+            <div class="slideshow-container">
+                <div class="mySlides fade"><img src="../events/img/1.1.png"></div>
+                <div class="mySlides fade"><img src="../events/img/1.2.png"></div>
+                <div class="mySlides fade"><img src="../events/img/1.3.png"></div>
+                <div class="mySlides fade"><img src="../events/img/2.4.png"></div>
+                <div class="mySlides fade"><img src="../events/img/1.5.png"></div>
+                <div class="mySlides fade"><img src="../events/img/1.6.png"></div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="slide-indicators">
+                <span class="slide-line" onclick="currentSlide(1)"></span>
+                <span class="slide-line" onclick="currentSlide(2)"></span>
+                <span class="slide-line" onclick="currentSlide(3)"></span>
+                <span class="slide-line" onclick="currentSlide(4)"></span>
+                <span class="slide-line" onclick="currentSlide(5)"></span>
+                <span class="slide-line" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+
+        <div class="year-toggle-wrapper">
+            <div class="toggle-track">
+                <div class="toggle-slider"></div>
+                <button class="toggle-btn active" onclick="switchTeam('2025', this)">2025–26</button>
+                <button class="toggle-btn" onclick="switchTeam('2024', this)">2024–25</button>
+            </div>
+        </div>
+
+        <div id="team2025" class="roster-grid active-roster">
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (3).JPG" alt="Rutvik Magarde"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Rutvik Magarde</h3><span class="role">Chairperson</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (13).JPG" alt="Swastik Thanekar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Swastik Thanekar</h3><span class="role">Vice Chairperson</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (23).JPG" alt="Anushka Pawar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Anushka Pawar</h3><span class="role">Secretary</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (1).JPG" alt="Charudatt Patil"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Charudatt Patil</h3><span class="role">Joint Secretary</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (6).JPG" alt="Kaustubh Kadam"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Kaustubh Kadam</h3><span class="role">Treasurer</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (21).JPG" alt="Suhani Chandel"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Suhani Chandel</h3><span class="role">Joint Treasurer</span></div></div>
+            
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (14).JPG" alt="Ajinkya Katke"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Ajinkya Katke</h3><span class="role">Technical Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (16).JPG" alt="Disha Shelar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Disha Shelar</h3><span class="role">Jt. Technical Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/16.jpeg" alt="Soham Kulkarni"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Soham Kulkarni</h3><span class="role">Webmaster</span></div></div>
+            
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (4).JPG" alt="Shlok Bharambe"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Shlok Bharambe</h3><span class="role">Graphics Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (18).JPG" alt="Ajay"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Ajay</h3><span class="role">Jt. Graphic Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (2).JPG" alt="Varad Patil"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Varad Patil</h3><span class="role">Videography Head</span></div></div>
+            
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (22).JPG" alt="Deevy Bhanushali"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Deevy Bhanushali</h3><span class="role">Content Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (7).JPG" alt="Gargee Phansekar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Gargee Phansekar</h3><span class="role">Jt. Content Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (10).JPG" alt="Sanjana Maity"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Sanjana Maity</h3><span class="role">Jt. SMC Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (8).JPG" alt="Shreya Kale"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Shreya Kale</h3><span class="role">Publicity Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (unknown).JPG" alt="Mansi Yadav"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Mansi Yadav</h3><span class="role">Event Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (9).JPG" alt="Vishwaneel"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Vishwaneel</h3><span class="role">Jt. Event Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team25/img (11).JPG" alt="Ruchi Pawar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Ruchi Pawar</h3><span class="role">Extreme Embassadaor</span></div></div>
+        </div >
+
+        <div id="team2024" class="roster-grid">
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/1.jpeg" alt="Abhijith Nair"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Abhijith Nair</h3><span class="role">Chairperson</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/2.jpeg" alt="Janhavi Soni"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Janhavi Soni</h3><span class="role">Vice Chairperson</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/3.jpeg" alt="Parth Yadav"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Parth Yadav</h3><span class="role">Secretary</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/14.jpeg" alt="Omkar Desai"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Omkar Desai</h3><span class="role">Treasurer</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/9.jpeg" alt="Aryan Shirsat"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Aryan Shirsat</h3><span class="role">Graphics Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/5.jpeg" alt="Pawan Mayekar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Pawan Mayekar</h3><span class="role">Tech Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/7.jpeg" alt="Sujay Nanaware"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Sujay Nanaware</h3><span class="role">Event Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/16.jpeg" alt="Soham Kulkarni"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Soham Kulkarni</h3><span class="role">Website Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/12.jpeg" alt="Sarvesh Patekar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Sarvesh Patekar</h3><span class="role">Publicity Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/18.jpeg" alt="Atharva Pawar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Atharva Pawar</h3><span class="role">Videography Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/10.jpeg" alt="Andrew Nitin"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Andrew Nitin</h3><span class="role">Content Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/17.jpeg" alt="Harsh Koli"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Harsh Koli</h3><span class="role">Social Media Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/15.jpeg" alt="Achintya Pednekar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Achintya Pednekar</h3><span class="role">Extreme Ambassador</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/19.jpeg" alt="Shreyas Ghutukade"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Shreyas Ghutukade</h3><span class="role">Jt. SMC Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/8.jpeg" alt="Rickysingh Tekcham"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Rickysingh Tekcham</h3><span class="role">Jt. Event Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/6.jpeg" alt="Rutvik Magarde"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Rutvik Magarde</h3><span class="role">Jt. Tech Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/13.jpeg" alt="Shreya Kale"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Shreya Kale</h3><span class="role">Jt. Publicity Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/11.jpeg" alt="Ruchi Pawar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Ruchi Pawar</h3><span class="role">Jt. Content Head</span></div></div>
+            <div class="cyber-badge"><div class="badge-img"><img src="../static/team24/4.jpeg" alt="Anushka Pawar"><div class="badge-overlay"><a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a></div></div><div class="badge-info"><h3>Anushka Pawar</h3><span class="role">Jt. Secretary</span></div></div>
+        </div>
+
+        <iframe id="frame" width="100%" height="600px" style="border:none; margin-top: 50px;"></iframe>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <img src="../static/PCElogo.png" style="height: 40px; width: 40px; margin-bottom: 10px;" alt="PCE Logo" />
+            <p>© 2026 IEEE PCE Student Branch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../home/script.js"></script> <script src="../council/council.js"></script>      </body>
+</html>

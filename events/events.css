@@ -1,0 +1,294 @@
+/* Ensure the page clears the fixed navbar */
+.events-page-wrapper {
+  margin-top: 100px; 
+  min-height: 80vh;
+}
+
+.space-title {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-main, #f8fafc);
+  letter-spacing: -1px;
+}
+
+/* --- Tech Toggle Buttons --- */
+.year-toggles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.tech-btn {
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--text-muted, #94a3b8);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 1rem;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tech-btn:hover {
+  border-color: var(--accent-primary, #3b82f6);
+  color: var(--text-main, #fff);
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.tech-btn.active {
+  background: var(--accent-primary, #3b82f6);
+  color: #fff;
+  border-color: var(--accent-primary, #3b82f6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.tech-btn.outline {
+  border-style: dashed;
+}
+
+/* --- The Dynamic Event Cards --- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.event-card {
+  background: var(--bg-card, #111c33);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--accent-primary, #3b82f6);
+}
+
+.card-img-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Perfect portrait posters */
+  overflow: hidden;
+  background-color: var(--bg-deep, #050b14);
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--text-main, #fff);
+}
+
+.card-content p {
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.event-date {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  color: var(--accent-primary, #3b82f6);
+  background: rgba(59, 130, 246, 0.1);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* --- The Active Radar Empty State --- */
+.no-events {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-card, #111c33);
+  /* Creates the high-tech faint grid */
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* The vertical scanning laser */
+.radar-scan {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.1) 80%, rgba(59, 130, 246, 0.4));
+  animation: scan 3s linear infinite;
+  z-index: 1;
+}
+
+@keyframes scan {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* The terminal text styling */
+.typewriter-text {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-mono, monospace);
+  color: var(--accent-primary, #3b82f6);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+/* The blinking terminal cursor */
+.typewriter-text .cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: var(--accent-primary, #3b82f6);
+  vertical-align: middle;
+  margin-left: 8px;
+  animation: blink 1s step-end infinite;
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- Slideshow Modal Specifics --- */
+.modal-content-wrapper {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-surface, #0a1120);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.mySlides {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+#dots-container {
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: var(--text-main, #fff);
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s ease;
+  background: rgba(5, 11, 20, 0.8);
+  border-radius: 4px;
+  user-select: none;
+}
+
+.next { right: 10px; }
+.prev { left: 10px; }
+
+.prev:hover, .next:hover {
+  background: var(--accent-primary, #3b82f6);
+}
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: var(--accent-primary, #3b82f6);
+  transform: scale(1.5);
+}
+
+/* --- Encrypted Ghost Slots --- */
+.ghost-card {
+  background: rgba(17, 28, 51, 0.3); /* Extremely faint card background */
+  border: 1px dashed rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px; /* roughly matches your poster height */
+  text-align: center;
+  padding: 20px;
+  user-select: none;
+}
+
+.ghost-icon {
+  font-size: 3rem;
+  color: rgba(59, 130, 246, 0.2);
+  margin-bottom: 15px;
+}
+
+.ghost-text {
+  font-family: var(--font-mono, monospace);
+  color: rgba(59, 130, 246, 0.4);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.ghost-subtext {
+  font-family: var(--font-mono, monospace);
+  color: rgba(59, 130, 246, 0.2);
+  font-size: 0.7rem;
+  margin-top: 8px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | IEEE PCE</title>
+    <link rel="shortcut icon" href="../static/ieeee.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="../home/styles.css" />
+    <link rel="stylesheet" href="/contact/contact.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../home/index.html" class="logo-link">
+            <img src="../static/ieeee.png" alt="IEEE PCE Logo" class="logo" />
+        </a>
+            <ul class="nav-links" id="nav-links">
+            <li><a href="../home/index.html" ">Home</a></li>
+            <li><a href="../events/events.html">Events</a></li>
+            <li><a href="../faculty/faculty.html">Faculty</a></li>
+            <li><a href="../council/council.html">Council</a></li>
+            <li><a href="Final Mag.pdf">Magazine</a></li>
+            <li><a href="../contact/contact.html" style="color: var(--accent-primary);">Contact Us</a></li>
+            </ul>
+        <div class="nav-controls">
+            <i class="fa-solid fa-bars open-menu" id="open-menu"></i>
+        </div>
+    </header>
+
+    <main class="contact-page-wrapper">
+        
+        <section class="section-padding center-header">
+            <p class="tech-subheading">// SYSTEM: COMM_CHANNEL_OPEN</p>
+            <h2 class="space-title">Establish Connection</h2>
+            <div class="line mx-auto"></div>
+        </section>
+
+        <section class="contact-terminal">
+            
+            <div class="terminal-panel form-panel">
+                <div class="panel-header">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span>Transmission_Form.exe</span>
+                </div>
+                
+                <form action="mailto:ieeepce.ac.in" method="POST" class="cyber-form" id="contactForm" novalidate>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" id="contactName" name="name" required placeholder=" " />
+                            <label for="contactName">Full Name</label>
+                            <div class="focus-border"></div>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="contactPhone" name="phone" required placeholder=" " />
+                            <label for="contactPhone">Phone Number</label>
+                            <div class="focus-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="contactEmail" name="email" required placeholder=" " />
+                        <label for="contactEmail">Email Address</label>
+                        <div class="focus-border"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <select id="contactInquiry" name="inquiry" required>
+                            <option value="" disabled selected>Select Inquiry Directive...</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="partnership">Sponsorship / Partnership</option>
+                            <option value="sales">Event Inquiry</option>
+                            <option value="other">Other Directive</option>
+                        </select>
+                        <div class="focus-border"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="contactDescription" name="description" rows="5" required placeholder=" "></textarea>
+                        <label for="contactDescription">Subject (Message)</label>
+                        <div class="focus-border"></div>
+                    </div>
+
+                    <button type="submit" class="cyber-btn" id="submitBtn">
+                        <span class="btn-text">SEND</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="terminal-panel info-panel">
+                <div class="panel-header">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                    <span>HQ_Coordinates.dat</span>
+                </div>
+
+                <div class="social-radar">
+                    <p class="radar-title">Alternative Contacts:</p>
+                    <div class="social-links-grid">
+                        <a href="https://www.linkedin.com/in/ieeepce/" target="_blank" class="social-box linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn Network</span>
+                        </a>
+                        <a href="https://www.instagram.com/ieeepce/" target="_blank" class="social-box instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram Feed</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.6693193231367!2d73.12548147596005!3d18.99020598219665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e866de88667f%3A0xc1c5d5badc610f5f!2sPillai%20College%20of%20Engineering%2C%20New%20Panvel%20(Autonomous)!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-overlay-scan"></div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <img src="../static/PCElogo.png" style="height: 40px; width: 40px; margin-bottom: 10px;" alt="PCE Logo" />
+            <p>© 2026 IEEE PCE Student Branch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../home/script.js"></script>
+    <script src="../contact/contact.js"></script>
+</body>
+</html>

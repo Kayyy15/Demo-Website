@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | IEEE PCE</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../static/ieeee.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  
+  <link rel="stylesheet" href="../home/styles.css" /> <link rel="stylesheet" href="/events/events.css" />   </head>
+<body>
+
+  <header class="navbar">
+    <a href="../home/index.html" class="logo-link">
+      <img src="../static/ieeee.png" alt="IEEE PCE Logo" class="logo" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../home/index.html"">Home</a></li>
+      <li><a href="../events/events.html" style="color: var(--accent-primary);">Events</a></li>
+      <li><a href="../faculty/faculty.html">Faculty</a></li>
+      <li><a href="../council/council.html">Council</a></li>
+      <li><a href="Final Mag.pdf">Magazine</a></li>
+      <li><a href="../contact/contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-controls">
+      <i class="fa-solid fa-bars open-menu" id="open-menu"></i>
+    </div>
+  </header>
+
+  <main class="events-page-wrapper">
+    
+    <section class="events-section section-padding">
+      <div class="section-header">
+        <h2 class="space-title">Upcoming Schedule</h2>
+        <div class="line"></div>
+      </div>
+      <div id="event-calendar" class="events-grid">
+        </div>
+    </section>
+
+    <section class="events-section section-padding" style="padding-top: 0;">
+      <div class="section-header">
+        <h2 class="space-title">Event Archives</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="year-toggles">
+        <button class="tech-btn active" onclick="renderEvents(2026, 'current-events'); setActiveBtn(this); showSection('current');">2026</button>
+        <button class="tech-btn" onclick="loadPastEvents(2025); setActiveBtn(this);">2025</button>
+        <button class="tech-btn" onclick="loadPastEvents(2024); setActiveBtn(this);">2024</button>
+        <button class="tech-btn" onclick="loadPastEvents(2023); setActiveBtn(this);">2023</button>
+        <button class="tech-btn outline" onclick="loadPastWorkshops(); setActiveBtn(this);">Workshops</button>
+      </div>
+
+      <div id="current-events" class="events-grid"></div>
+      <div id="past-events" class="events-grid" style="display: none;"></div>
+      <div id="past-workshops" class="events-grid" style="display: none;"></div>
+    </section>
+
+  </main>
+
+  <div id="eventModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="modal-content-wrapper">
+      <div id="slides-container"></div>
+      <div id="dots-container"></div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <footer class="site-footer" style="margin-top: auto;">
+    <div class="footer-bottom">
+      <img src="../static/PCElogo.png" style="height: 40px; width: 40px; margin-bottom: 10px;" alt="PCE Logo" />
+      <p>© 2026 IEEE PCE Student Branch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script> <script src="events.js"></script>   </body>
+</html>
