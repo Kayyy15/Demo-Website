@@ -21,6 +21,12 @@ const eventsData = {
       description: "An interactive coding challenge to solve real-world problems. Debug and analyze complex code to identify errors and improve problem-solving skills.",
       date: "2026-03-16"
     },
+    {
+      title: "Cognithon 2026: AI & ML Hackathon",
+      photos: ["../static/events/Cognithon 2026.jpeg","../static/events/Cognithon(2).jpeg"],
+      description: "Ready to build the future with AI? Join COGNITHON 2026, a 9-hour AI Hackathon where you’ll tackle real industry problem statements, build innovative AI solutions, and receive guidance from experienced industry mentors.",
+      date: "2026-07-18"
+    },
   ],
   2025:[ 
     { title: "🎨✨ Photoshop Workshop", photos: ["../static/events/Poster Designing.jpg"], description: "IEEE presents “Zero to Hero”, a Photoshop Poster Designing Workshop & Competition! 🚀", date: "2025-08-15" },
@@ -254,4 +260,32 @@ document.addEventListener("DOMContentLoaded", () => {
   renderUpcomingEvents(); 
   renderEvents(2026, "current-events");
   showSection("current"); 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Mobile Navigation Menu ---
+    const openMenu = document.getElementById('open-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    if (openMenu && closeMenu && navLinks) {
+        // Open menu
+        openMenu.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+
+        // Close menu
+        closeMenu.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+
+        // Auto-close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // ... (keep the rest of your intersection observer, modal, and canvas code exactly as it is)
 });

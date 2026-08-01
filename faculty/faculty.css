@@ -180,3 +180,27 @@
     max-width: 350px;
   }
 }
+
+@media (max-width: 480px) {
+  .faculty-page-wrapper {
+    margin-top: 80px;
+  }
+
+  .personnel-card {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .card-inner {
+    padding: 30px 20px;
+  }
+
+  .personnel-image-wrapper {
+    width: 220px; 
+    height: 220px;
+  }
+
+  .space-title {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+  }
+}

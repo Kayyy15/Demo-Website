@@ -583,23 +583,105 @@ body {
   color: #fff;
 }
 
-/* Make sure the user knows the small posters are clickable */
+/* Make sure the small posters are clickable */
 .card-img-wrapper img {
   cursor: pointer;
 }
 
-/* Responsive */
+/* Responsive Updates */
 @media (max-width: 900px) {
+  /* 1. Mobile Menu Drawer */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    height: auto;
+    width: fit-content;
+    min-width: 220px; 
+    padding: 70px 40px 40px 40px; 
+    gap: 1.25rem; 
+    background: rgba(5, 11, 20, 0.98); 
+    backdrop-filter: blur(15px);
+    
+    /* Styling the exposed edges */
+    border-left: 1px solid rgba(255,255,255,0.05); 
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom-left-radius: 16px;
+    
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex; 
+    z-index: 1001; 
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.6); /* Drops shadow down and to the left */
+  }
+
+  .nav-links.active {
+    right: 0; /* Snaps flush to the right edge */
+  }
+
+  /* Positions the X cleanly inside the smaller box */
+  #close-menu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+  }
+  
+  #close-menu:hover {
+    color: var(--text-main);
+  }
+
+  .nav-controls i {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* 2. Global Section Padding Adjustment */
+  /* Reduces the 100px padding which takes up too much mobile screen space */
+  .section-padding {
+    padding: 60px 5%; 
+  }
+
+  /* 3. Grid Adjustments */
   .about-content, .contact-container {
     grid-template-columns: 1fr;
     flex-direction: column;
   }
-  
-  .nav-links {
-    display: none; 
+
+  /* Shrinks the extreme padding inside the contact box */
+  .contact-info {
+    padding: 30px 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  /* Prevent title overflow on narrow screens */
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 3.5rem); 
+  }
+
+  /* Slim down the description highlight box */
+  .description {
+    padding: 15px 20px; 
+    font-size: 1rem;
+  }
+
+  /* Prevent grid blowout on screens smaller than 350px */
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* Ensure the sliding banner text is easily readable */
+  .sliding-text {
+    font-size: 0.75rem;
   }
   
-  .nav-controls i {
-    display: block;
+  .section-header h2 {
+    font-size: 2rem;
   }
 }

@@ -303,3 +303,36 @@
 .cyber-badge.highlight .role {
   color: var(--accent-primary, #3b82f6);
 }
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .jumbotron-container {
+    max-width: 95%; 
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .roster-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .badge-info {
+    padding: 12px 8px;
+  }
+
+  .badge-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .role {
+    font-size: 0.7rem;
+  }
+
+  .jumbotron-container {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}

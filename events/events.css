@@ -292,3 +292,45 @@
   font-size: 0.7rem;
   margin-top: 8px;
 }
+
+/* --- Mobile Responsiveness for Events Page --- */
+@media (max-width: 480px) {
+  /* 1. Fix the massive heading fonts */
+  .space-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem); /* Scales down smoothly without breaking */
+  }
+
+  /* 2. Shrink the gap and margins on the year toggle buttons */
+  .year-toggles {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .tech-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* 3. Prevent the grid cards from bleeding off the edge of the screen */
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  /* 4. Shrink the encrypted ghost slots so they don't look awkwardly huge */
+  .ghost-card {
+    min-height: 350px; 
+    padding: 15px;
+  }
+  
+  /* 5. Adjust the No Events radar box */
+  .no-events {
+    min-height: 180px;
+  }
+
+  .typewriter-text {
+    font-size: 0.9rem;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
