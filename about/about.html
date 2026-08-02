@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | IEEE PCE</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../static/ieeee.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Iceland&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../home/styles.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="preloader">
+    <div class="loader-content">IEEE PCE</div>
+  </div>
+
+  <!-- Shared Navbar -->
+  <header class="navbar">
+    <a href="../index.html" class="logo-link">
+      <img src="../static/ieeee.png" alt="IEEE PCE Logo" class="logo" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html" style="color: var(--accent-primary);">About Us</a></li>
+      <li><a href="../events/events.html">Events</a></li>
+      <li><a href="../faculty/faculty.html">Faculty</a></li>
+      <li><a href="../council/council.html">Council</a></li>
+      <li><a href="../Final Mag.pdf">Magazine</a></li>
+      <li><a href="../contact/contact.html">Contact Us</a></li>
+      <i class="fa-solid fa-xmark close-menu" id="close-menu"></i>
+    </ul>
+    <div class="nav-controls">
+      <i class="fa-solid fa-bars open-menu" id="open-menu"></i>
+    </div>
+  </header>
+
+  <!-- Sliding Banner -->
+  <div class="sliding-banner">
+    <div class="sliding-text">Discover IEEE PCE — Fostering Technological Innovation & Academic Excellence.</div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="about-hero section-padding">
+      <canvas id="particle-canvas"></canvas>
+      <div class="about-hero-content hidden">
+        <span class="subtitle">Empowering Innovators</span>
+        <h1 class="page-title">About IEEE PCE</h1>
+        <p class="hero-desc">
+          Connecting driven engineering minds with global opportunities, cutting-edge technology, and transformative leadership experiences.
+        </p>
+      </div>
+    </section>
+
+    <!-- Global Vision & Mission Section -->
+    <section class="global-vision-section section-padding">
+      <div class="section-header hidden">
+        <h2>Global IEEE Footprint</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="vision-mission-grid">
+        <div class="vm-card hidden">
+          <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Global Vision</h3>
+          <p>
+            IEEE will be essential to the global technical community and to technical professionals everywhere, and be universally recognized for the contributions of technology and of technical professionals in improving global conditions.
+          </p>
+        </div>
+
+        <div class="vm-card hidden">
+          <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Global Mission</h3>
+          <p>
+            IEEE’s core purpose is to foster technological innovation and excellence for the benefit of humanity. We inspire a global community through highly-cited publications, conferences, technology standards, and professional development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IEEE PCE Student Branch Section -->
+    <section class="sb-section section-padding">
+      <div class="section-header hidden">
+        <h2>IEEE PCE Student Branch</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="sb-container hidden">
+        <div class="sb-text">
+          <p>
+            Established in <strong>2005</strong> at Pillai College of Engineering (New Panvel), the <strong>IEEE PCE Student Branch</strong> was built on a vision to give students a foundational understanding of technical concepts and nurture their innate curiosity in technology.
+          </p>
+          <p>
+            Operating under the Bombay Section, IEEE PCE provides a dynamic platform where budding engineers step beyond classroom academia. From domain-specific coding hackathons like <em>Cognithon</em> to interactive technical competitions like <em>Code Autopsy</em>, our initiatives equip students with practical problem-solving capabilities.
+          </p>
+          <p>
+            Our vibrant ecosystem encourages collaborative growth, professional networking, research publication opportunities, and peer-to-peer mentorship across every engineering discipline.
+          </p>
+        </div>
+        <div class="sb-stats-grid">
+          <div class="stat-box">
+            <h4>2005</h4>
+            <span>Established</span>
+          </div>
+          <div class="stat-box">
+            <h4>20+</h4>
+            <span>Years of Excellence</span>
+          </div>
+          <div class="stat-box">
+            <h4>50+</h4>
+            <span>Annual Events</span>
+          </div>
+          <div class="stat-box">
+            <h4>400+</h4>
+            <span>Active Members</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars / Objectives -->
+    <section class="pillars-section section-padding">
+      <div class="section-header hidden">
+        <h2>Our Core Pillars</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card hidden">
+          <i class="fa-solid fa-code"></i>
+          <h3>Technical Upskilling</h3>
+          <p>Hands-on workshops, project expos, and hackathons focused on software development, AI, robotics, and hardware engineering.</p>
+        </div>
+
+        <div class="pillar-card hidden">
+          <i class="fa-solid fa-network-wired"></i>
+          <h3>Professional Network</h3>
+          <p>Connecting students directly with industry experts, IEEE global alumni networks, and distinguished academicians.</p>
+        </div>
+
+        <div class="pillar-card hidden">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Innovation & Research</h3>
+          <p>Encouraging paper presentations, project development, and original technical contributions across domains.</p>
+        </div>
+
+        <div class="pillar-card hidden">
+          <i class="fa-solid fa-users"></i>
+          <h3>Leadership & Teamwork</h3>
+          <p>Fostering organizational management, soft skills, and teamwork through student-led executive committees.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 IEEE PCE Student Branch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../home/script.js"></script>
+</body>
+</html>

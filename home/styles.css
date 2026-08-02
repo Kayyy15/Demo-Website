@@ -544,19 +544,22 @@ body {
   background-color: rgba(5, 11, 20, 0.85); /* Deep dark blue shadowy background */
   backdrop-filter: blur(8px); /* Smooth background blur */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal.show-modal {
   display: flex;
-  justify-content: center;
-  align-items: center;
   opacity: 1;
+  visibility: visible;
 }
 
 .modal-content {
   max-width: 90%;
   max-height: 90vh;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
   transform: scale(0.9);
