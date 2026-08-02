@@ -336,3 +336,8 @@
     margin-bottom: 40px;
   }
 }
+
+/* Temporarily disabled LinkedIn badges */
+.badge-overlay {
+    display: none !important;
+}
