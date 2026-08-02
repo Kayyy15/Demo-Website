@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine | IEEE PCE</title>
+    <link rel="shortcut icon" href="../static/ieeee.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="../home/styles.css" />
+    <link rel="stylesheet" href="magazine.css" />
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo-link">
+            <img src="../static/ieeee.png" alt="IEEE PCE Logo" class="logo" />
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="../events/events.html">Events</a></li>
+            <li><a href="../faculty/faculty.html">Faculty</a></li>
+            <li><a href="../council/council.html">Council</a></li>
+            <li><a href="magazine.html" style="color: var(--accent-primary);">Magazine</a></li>
+            <li><a href="../contact/contact.html">Contact Us</a></li>
+            <i class="fa-solid fa-xmark close-menu" id="close-menu"></i>
+        </ul>
+        <div class="nav-controls">
+            <i class="fa-solid fa-bars open-menu" id="open-menu"></i>
+        </div>
+    </header>
+
+    <main class="magazine-page-wrapper">
+        
+        <!-- Retractable Year Selector Sidebar -->
+        <aside class="year-sidebar" id="yearSidebar">
+            <button class="sidebar-toggle-btn" id="sidebarToggle" title="Toggle Archive">
+                <i class="fa-solid fa-chevron-right" id="toggleIcon"></i>
+            </button>
+            <div class="sidebar-content">
+                <h3><i class="fa-solid fa-book-archive"></i> Editions</h3>
+                <ul class="year-list">
+                    <!-- <li><button class="year-btn active" data-src="https://heyzine.com/example-link-2026">2026 Edition</button></li>
+                    <li><button class="year-btn" data-src="https://heyzine.com/example-link-2025">2025 Edition</button></li> -->
+                    <li><button class="year-btn" data-src="https://heyzine.com/flip-book/5d223b1a27.html">2024 Edition</button></li>
+                </ul>
+                <!-- <div class="sidebar-download">
+                    <a href="../Final Mag.pdf" download class="cyber-btn-small">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                </div> -->
+            </div>
+        </aside>
+
+        <!-- Main Flipbook Viewer Area -->
+        <section class="viewer-container">
+            <div class="viewer-header">
+                <p class="tech-subheading">// ARCHIVE: DIGITAL_PUBLICATION</p>
+                <h2 class="space-title">IEEE PCE Chronicle</h2>
+            </div>
+
+            <div class="flipbook-frame-wrapper">
+                <iframe id="magazineViewer" src="https://heyzine.com/flip-book/5d223b1a27.html" width="100%" height="100%" style="border:none;" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <img src="../static/PUlogo.png" style="height: 90px; width: 90px; margin-bottom: 10px;" alt="PCE Logo" />
+            <p>© 2026 IEEE PCE Student Branch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../home/script.js"></script>
+    <script src="magazine.js"></script>
+</body>
+</html>
